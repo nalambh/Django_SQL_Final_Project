@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Index-Page</title>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>Shopping ID</th>
+            <th>Item Name</th>
+            <th>Per Item Price</th>
+            <th>Total Quantity</th>
+            <th>Total Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for shopping in shoppings %}
+        <tr>
+            <td>{{shopping.pid}}</td>
+            <td>{{shopping.itemName}}</td>
+            <td>{{shopping.perItemPrice}}</td>
+            <td>{{shopping.totalQuantity}}</td>
+            <td>{% widthratio shopping.totalQuantity 1 shopping.perItemPrice %}</td>
+            <td>
+                <a href="edit/{{shopping.id}}"> Edit</a>
+                <a href="delete/{{shopping.id}}"> Delete</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<body>

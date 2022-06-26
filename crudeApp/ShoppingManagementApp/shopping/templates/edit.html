@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <title>Update-page</title>
+</head>
+<body>
+<form method="POST" action="/update/{{shopping.id}}">
+
+    {% csrf_token %}
+
+    <div>
+         <div>
+              <label>Shopping ID</label>
+              <div>
+                  <input type="text" name="pid", value="{{shopping.pid}}">
+              <div>
+              <label>Item Name</label>
+              <div>
+                  <input type="text" name="itemName", value="{{shopping.itemName}}">
+              <div>
+              <label>Per Item Price</label>
+              <div>
+                  <input type="text" name="perItemPrice", value="{{shopping.perItemPrice}}">
+              <div>
+              <label>Total Quantity</label>
+              <div>
+                  <input type="text" name="totalQuantity", value="{{shopping.totalQuantity}}">
+              <div>
+           <div>
+         <button type="submit"> SUBMIT</button>
+     <div>
+</forms>
+</body>
+</html>
